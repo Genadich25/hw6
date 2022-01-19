@@ -22,33 +22,16 @@ public class Main {
 
     //3 задача
 
-        String[] wordsFullName = fullName.split(" ");
-        System.out.print("Данные ФИО сотрудника для административного отдела — ");
-        for (int i = 0; i < wordsFullName.length; i++) {
-            if(i != wordsFullName.length - 1){
-                System.out.print(wordsFullName[i] + "; ");
-            } else {
-                System.out.println(wordsFullName[i]);
-            }
-        }
+        String fullName2 = fullName.replace(' ', ';');
+        System.out.println("Данные ФИО сотрудника для административного отдела — " + fullName2);
 
         System.out.println();
 
     //4 задача
 
         fullName = "Иванов Семён Семёнович";
-        char[] charFullName = fullName.toCharArray();
-        System.out.print("Данные ФИО сотрудника — ");
-        for (int i = 0; i < charFullName.length; i++) {
-            if(charFullName[i] != 'ё'){
-                System.out.print(charFullName[i]);
-            } else {
-                charFullName[i] = 'е';
-                System.out.print(charFullName[i]);
-            }
-        }
-
-        System.out.println();
+        String fullNameNoE = fullName.replace('ё','е');
+        System.out.println("Данные ФИО сотрудника — " + fullNameNoE);
 
     }
 }
